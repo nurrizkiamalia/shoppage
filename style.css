@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --prada-font: "Old Standard TT", serif;
+    --open-sans-font: "Open Sans", sans-serif;
+    --primary-color: #F4F5F7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F4F5F7;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: var(--open-sans-font);
+}
+
+.container{
+    padding-left: 147px;
+    padding-right: 147px;
+}
+
+a{
+    color: black;
+}
+
+h2.section-title{
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+button{
+    background-color: #F4F5F7;
+    border: 1px solid black;
+    padding: 19px 55px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover{
+    animation-name: btnAnimate;
+    animation-duration: .9s;
+    animation-iteration-count: infinite;
+    transition: ease-in-out;
+}
+
+/* top bar */
+
+.top-bar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 17px 147px;
+    background-color: #C4C4C4;
+}
+
+.shop-link{
+    grid-column: 2 / 3;
+    text-align: center;
+    font-family: var(--prada-font);
+    cursor:alias;
+}
+
+.top-function{
+    text-align: right;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.top-function a{
+    text-decoration: none;
+}
+
+.top-function a:hover{
+    color: #666666;
+}
+
+.fa-heart:hover{
+    color: rgb(218, 12, 46);
+}
+
+/* Nav */
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 21px;
+    padding-bottom: 18px;
+    font-family: var(--prada-font);
+    gap: 19px;
+}
+
+h1.logo{
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul.nav-links{
+    display: flex;
+    gap: 56px;
+}
+
+ul.nav-links li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul.nav-links li a:hover{
+    color: #666666;
+}
+
+ul.nav-links li:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+/* Hero */
+.hero{
+    padding-top: 26px;
+    padding-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.hero img:hover{
+    transform: scale(1.05);
+    transition: 0.25s ease-in-out;
+}
+
+h1.title{
+    font-size: 36px;
+    font-weight: 400;
+    font-family: var(--prada-font);
+    text-transform: uppercase;
+}
+
+.hero .text{
+    width: 30%;
+    text-align: center;
+}
+
+/* New Arrival */
+
+.new-arrival{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 74px;
+}
+
+.product-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.product-detail{
+    padding: 16px 39px;
+}
+
+.product-box{
+    cursor:zoom-in;
+}
+
+.product-box img{
+    border: 3px solid transparent;
+    width: 365px;
+}
+
+.product-box:hover img{
+    animation-name: borderAnimate;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transform: scale(1.05);
+    transition: 0.25s ease-in-out;
+}
+
+p.sub-text{
+    color: #848484;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+h3.product-name{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* light layers */
+
+.light-layers{
+    margin: 74px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.light-layers img{
+    grid-column: 2 / 4;
+    border: 3px solid transparent;
+}
+
+.light-layers img:hover{
+    animation: borderAnimate 2.5s infinite;
+}
+
+.light-layers-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+.light-layers-content h3{
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+small{
+    font-size: 12px;
+    margin-bottom: 37px;
+    margin-right: 70px;
+}
+
+/* banner */
+.banner{
+    margin-top: 156px;
+    padding: auto 147px;
+    margin-bottom: 36px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+}
+
+.banner img{
+    width: 100%;
+    transform: scale(1.05);
+}
+
+.banner-content{
+    z-index: 9;
+    position: absolute;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 41px;
+    bottom: 0;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.banner-content h3{
+    font-size: 24px;
+    letter-spacing: 8px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.banner-content button{
+    border: none;
+}
+
+/* Footer */
+.footer{
+    background-color: #fff;
+    padding-top: 43px;
+    padding-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 2fr;
+    margin-bottom: 44px;
+}
+
+.footer-text{
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    font-size: 14px;
+}
+
+.footer-links li a{
+    text-decoration: none;
+}
+
+.footer-links li a:hover{
+    color: #666666;
+}
+
+.contact{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-links{
+    text-align: center;
+}
+
+.contact a i{
+    font-size: 20px;
+}
+
+.fa-location-dot{
+    margin-right: 5px;
+}
+
+.footer span{
+    font-size: 14px;
+    cursor:alias;
+}
+
+/* Animation */
+
+@keyframes btnAnimate{
+    0%{
+        background-color: var(--primary-color);
+        color: black;
+    }
+    50%{
+        background-color: black;
+        color: white;
+    }
+
+    100%{
+        background-color: var(--primary-color);
+        color: black;
+    }
+}
+
+@keyframes borderAnimate{
+
+    25%{
+        border-top: 3px solid #000;
+    }
+
+    50%{
+        border-right: 3px solid #000;
+    }
+
+    75%{
+        border-bottom: 3px solid #000;
+    }
+
+    100%{
+        border-left: 3px solid #000;
+    }
+}
