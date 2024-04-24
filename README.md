@@ -1,1 +1,1 @@
-https://nurrizkiamalia.github.io/shoppage/
+https://nurrizkiamalia.github.io/shoppage-exercise1/
